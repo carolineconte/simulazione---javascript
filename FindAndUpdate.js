@@ -23,7 +23,8 @@ let obj = [
     }
 ]
 
-
+// trovare il valore della prima chiave -> se == null sostuire per 'unknow'
+// iterar su tutti i valore de type e aggionare ogni uno
 //se il type e’ “boolean” deve aggiornare usando false
 //se il type e’ “string” deve aggiornare usando stringa vuota
 //se il type e’ “number” deve aggiornare usando 0
