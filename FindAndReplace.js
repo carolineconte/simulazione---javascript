@@ -12,47 +12,28 @@
 
 
 //PseudoCodice
-/// Definire tutte le variabili
-/// Creare una funzione che Filtra il testo per la seconda variabile
-/// sostituire le istanze trovate
+/// separar palavras da frase para comparar
+//// crio uma variavel para a palavra corrente e uma para a nova frase
+/// se igual a nova palavra faço a substituicao
+/// se nao: adiciono a nova frase
 
-let text = "Let's study programming"
-
-function founAndReplace(text, word, newWord) {
-    let textArray = text.split(' ')
-
-    for (let i = 0; i < textArray.length; i++) {
-        if (textArray[i] == word){
-            textArray[i] = newWord
-        }
-    }
-
-    return textArray.join(' ')
-}
-
-
-
-
+let text = "Let's study programming? study programming! programming, programming... programming/react?"
 console.log(founAndReplace(text, 'programming', 'JavaScript'))
 
-// function founAndReplace(text, word, newWord) {
-//     let currentWord = ''
-//     let newText = '';
-//     for (let i = 0; i < text.length; i++) {
+function founAndReplace(text, word, newWord) {
+    let currentWord = '';
+    let newText = '';
 
-//         currentWord += (text[i])
-
-//         if (text[i] == ' ' || text[i] == '?') {
-//             currentWord = ''
-//         }
-
-//         let split = word.length
-
-//         if (currentWord == word) {
-//             newText = text.slice(0, split)
-//             newText = newText + ' ' + newWord
-//         }
-//     }
-
-//     return newText
-// }
+    for (let i = 0; i < text.length; i++) {
+        currentWord += (text[i])
+         if (currentWord == word) {
+            newText = newText + newWord
+            currentWord = ''
+        }
+        if (text[i] == ' ') {
+            newText += currentWord
+            currentWord = ''
+        }
+    }
+    return newText + currentWord
+}

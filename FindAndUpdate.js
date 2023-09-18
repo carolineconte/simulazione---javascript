@@ -1,4 +1,11 @@
 //Scrivere una funzione che, dato in ingresso un array di oggetti così strutturato:
+// trovare il valore della prima chiave -> se == null sostuire per 'unknow'
+// iterar su tutti i valore de type e aggionare ogni uno
+//se il type e’ “boolean” deve aggiornare usando false
+//se il type e’ “string” deve aggiornare usando stringa vuota
+//se il type e’ “number” deve aggiornare usando 0
+//se il type e’ “array” deve aggiornare usando array vuoto
+//se il type e’ “object” deve aggiornare usando oggetto vuoto
 
 let obj = [
     {
@@ -23,15 +30,6 @@ let obj = [
     }
 ]
 
-// trovare il valore della prima chiave -> se == null sostuire per 'unknow'
-// iterar su tutti i valore de type e aggionare ogni uno
-//se il type e’ “boolean” deve aggiornare usando false
-//se il type e’ “string” deve aggiornare usando stringa vuota
-//se il type e’ “number” deve aggiornare usando 0
-//se il type e’ “array” deve aggiornare usando array vuoto
-//se il type e’ “object” deve aggiornare usando oggetto vuoto
-
-
 function mapObject(obj) {
 
     for (let i = 0; i < obj.length; i++) {
@@ -50,3 +48,4 @@ function mapObject(obj) {
 }
 
 console.log(mapObject(obj))
+
