@@ -34,7 +34,6 @@ let obj = [
 
 function mapObject(obj) {
 
-
     for (let i = 0; i < obj.length; i++) {
 
         let keys = Object.keys(obj[i])
@@ -45,8 +44,6 @@ function mapObject(obj) {
         else if (typeof obj[i].type == 'number') { obj[i].type = 0 }
         else if (obj[i].type instanceof Array) { obj[i].type = [] }
         else { obj[i].type = {} }
-
-
 
     }
     return obj

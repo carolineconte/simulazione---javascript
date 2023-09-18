@@ -16,21 +16,43 @@
 /// Creare una funzione che Filtra il testo per la seconda variabile
 /// sostituire le istanze trovate
 
-let text = "Let's study programming ?!"
+let text = "Let's study programming"
 
-function replace(text, word, newWord) {
+function founAndReplace(text, word, newWord) {
     let textArray = text.split(' ')
-    
+
     for (let i = 0; i < textArray.length; i++) {
         if (textArray[i] == word){
-            
             textArray[i] = newWord
-          
         }
     }
 
     return textArray.join(' ')
-
 }
 
-console.log(replace(text, 'programming', "JavaScript"))
+
+
+
+console.log(founAndReplace(text, 'programming', 'JavaScript'))
+
+// function founAndReplace(text, word, newWord) {
+//     let currentWord = ''
+//     let newText = '';
+//     for (let i = 0; i < text.length; i++) {
+
+//         currentWord += (text[i])
+
+//         if (text[i] == ' ' || text[i] == '?') {
+//             currentWord = ''
+//         }
+
+//         let split = word.length
+
+//         if (currentWord == word) {
+//             newText = text.slice(0, split)
+//             newText = newText + ' ' + newWord
+//         }
+//     }
+
+//     return newText
+// }
